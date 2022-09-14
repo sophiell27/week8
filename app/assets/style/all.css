@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+    }
+    html{
+        @apply bg-grey-light;
+        font-family: 'Squada One', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    a{
+        text-decoration: none;
+    }
+    /* button{
+        background: transparent;
+    } */
+   .in{
+        background-color: none;
+    }
+}
+
+@layer components{
+    .btn{
+        padding: 8px 48px;
+        position: relative;
+    }
+    .btnNormal{
+        background: #fff;
+        border: 1px solid #000;
+    }
+    .btnSim{
+        border: 1px solid transparent;
+    }
+    .btnOverLay{
+        background: #E6553B;
+        border: 1px solid #000;
+        color: #fff;
+    }
+    .btn::after{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        right: -8px;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left: 8px solid #E6553B;
+        transform:rotate(45deg);
+    }
+    .btnOverLay::after{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        right: -8px;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left: 8px solid #000;
+        transform:rotate(45deg);
+    }
+    .btn:hover{
+        color: #fff;
+        background: #E6553B;
+        border: 1px solid #000;
+    }
+    .btn:hover.btn::after{
+        border-left: 8px solid #000;
+         /* url("../assets/images/art01.jpg") */
+    }
+}
+
+@layer utilities{
+    .aspect-rec{
+        aspect-ratio: 30/31;
+    }
+    .aspect-sm{
+        aspect-ratio: 29/25;
+    }
+    .aspect-lg{
+        aspect-ratio: 36/25;
+    }
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background: #000;
+    opacity: 1;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .swiper-pagination-bullet-active{
+      width: 16px;
+      background: #E6553B;
+  }
+  @media (min-width: 1024px) {
+    .swiper-slide-prev{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 30% !important;
+        filter: grayscale(100);
+      }
+      .swiper-slide-active{
+        width: 40% !important;
+      }
+      .swiper-slide-next{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 30% !important;
+        filter: grayscale(100);
+      }
+      .swiper-slide-active button{
+          display: block;
+      }
+      .swiper-slide-active p{
+        display: block;
+    }
+    .swiper-slide-active h2{
+        display: block;
+    }
+
+  }
+
+
+  
+
+/* marsonry  */
+
+/* fluid 5 columns */
+
+
+.artDis {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  
+  .artDis-sizer,
+  .artDis-item {
+    width: 50%;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .artDis-sizer,
+    .artDis-item {
+      width: 25%;
+      margin-bottom: 48px;
+    }
+
+  }
+    
+}
+
