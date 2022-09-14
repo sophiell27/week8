@@ -57,8 +57,24 @@ $(document).ready(() => {
     }
   });
 
-  //masonry 
+  $(".collFlow").hide();
 
+  $(".collection > button").click(function () {
+    console.log("ccc")
+    $(this).addClass("border border-black border-b-grey-light text-black").removeClass("border-transparent border-b-black text-[#808080]");
+    $(this).siblings().addClass("border-transparent border-b-black text-[#808080]").removeClass("border-black  border-b-grey-light text-black ");
+  })
+
+  $(".workBtn").click(function () {
+    $(".workFlow").show();
+    $(".collFlow").hide();
+  })
+  $(".collBtn").click(function () {
+    $(".collFlow").show();
+    $(".workFlow").hide();
+  })
+
+  //masonry 
 
   // init Masonry
   var $artDis = $('.artDis').masonry({
@@ -68,20 +84,11 @@ $(document).ready(() => {
     // use element for option
     columnWidth: '.artDis-sizer',
     percentPosition: true,
-    gutter: 10,
   });
   // layout Masonry after each image loads
   $artDis.imagesLoaded().progress(function () {
     $artDis.masonry('layout');
   });
-
-
-  // swiper 
-  if ($('.swiper-slide').hasClass('swiper-slide-active')) {
-    $(this).find().find().find("button").removeClass("opacity-0");
-    $(this).find().find().find("h2").removeClass("opacity-0");
-    $(this).find().find("p")..removeClass("opacity-0");
-  }
 
 });
 

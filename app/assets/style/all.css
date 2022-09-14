@@ -76,9 +76,34 @@
         border-left: 8px solid #000;
          /* url("../assets/images/art01.jpg") */
     }
+    .triangle{
+      position: absolute;
+       top: -8px;
+        right: -8px;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left: 8px solid #000;
+        transform:rotate(-45deg);
+        z-index: 100;
+    }
+    .triangle2{
+      position: absolute;
+       top: -8px;
+        left: -8px;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-right: 8px solid #000;
+        transform:rotate(45deg);
+        z-index: 100;
+    }
+    
 }
 
 @layer utilities{
+
+  
     .aspect-rec{
         aspect-ratio: 30/31;
     }
