@@ -1,10 +1,77 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    首頁
+  </title>
+  <!-- font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap"
+    rel="stylesheet">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+
+</head>
+
+<body>
+  <header class=" lg:border-b lg:border-black">
+    <div class="container">
+      <nav class="flex items-center relative py-4 md:py-10 lg:static lg:py-0 lg:items-stretch">
+        <a href="" class="logo lg:mr-auto flex items-center">
+          <img src="./assets/images/logo.svg" alt="" class="h-4.5 w-auto md:h-10">
+        </a>
+        <div class="flex w-full lg:w-auto lg:border-l lg:border-l-black ">
+          <button class="navBack hidden text-4.5 md:text-2xl">
+            <i class="fa-solid fa-angle-left fa-1x"></i>
+          </button>
+          <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="searchInput hidden w-full mx-4 py-0 border-0 bg-transparent 
+          focus:ring-0 focus:placeholder-transparent lg:min-w-[288px] lg:block lg:ml-auto lg:pl-12 lg:py-auto">
+          <!-- search btn  -->
+          <button type="button" class="searchBtn ml-auto lg:ml-0 lg:mr-12 text-4.5 md:text-2xl ">
+            <i class="fa-solid fa-magnifying-glass fa-1x "></i>
+          </button>
+          <!-- hamburger btn  -->
+          <button type="button" class="hamMenu ml-6 lg:hidden text-4.5 md:text-2xl">
+            <i class="fa-solid fa-bars fa-1x"></i>
+          </button>
+          <button type="button" class="navClose ml-6 hidden text-4.5 md:text-2xl">
+            <i class="fa-solid fa-xmark fa-1x"></i>
+          </button>
+
+        </div>
+
+        <!-- menu  -->
+        <ul class="dropdownMenu hidden absolute top-[50px] left-0 right-0 bg-white text-center px-3 
+          md:top-[120px] lg:static lg:flex lg:items-center lg:bg-transparent">
+          <li><a href="" class="block py-6 border-b border-b-black hover:text-primary
+              lg:border-b-0 lg:border-l lg:border-l-black lg:px-12 lg:py-10">探索</a></li>
+          <li><a href="" class="block py-6 hover:text-primary
+              lg:border-l lg:border-l-black lg:border-r lg:border-r-black lg:px-12 lg:py-10">市值</a></li>
+          <li>
+            <button type="button" class="block py-6 w-full bg-primary border border-black 
+              text-white text-4.5 mb-6 hover:shadow-lg active:shadow-inner
+              lg:py-0 lg:w-auto lg:bg-transparent lg:border-0 lg:text-black
+              lg:pl-12 lg:mb-0 lg:hover:shadow-none  lg:active:shadow-none lg:hover:text-primary lg:text-2xl">
+              <i class="hidden fa-solid fa-wallet fa-1x lg:block "></i>
+              <span class="lg:hidden">連結錢包</span>
+            </button>
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+  </header>
+
+  
 <main>
     <section class="mb-10 lg:mt-10 lg:mb-20">
         <div class="md:container">
@@ -648,3 +715,17 @@ md:py-22">
 
     </section>
 </main>
+
+    <footer class="py-6 text-center">
+      <p class=" font-['Noto_Sans_TC']">© ART NFT. All Rights Reserved</p>
+    </footer>
+    <!-- swiper  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- marsonry  -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
